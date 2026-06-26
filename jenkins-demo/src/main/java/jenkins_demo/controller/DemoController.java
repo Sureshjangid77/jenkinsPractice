@@ -8,7 +8,7 @@ public class DemoController {
 
     @GetMapping("/")
     public String home() {
-        return "Hello Jenkins.... auto updated !";
+        return "Hello Jenkins.... auto updated successfully !";
     }
 
 }

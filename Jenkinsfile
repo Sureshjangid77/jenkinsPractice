@@ -36,6 +36,11 @@ pipeline {
                 archiveArtifacts artifacts: 'jenkins-demo/target/*.jar', fingerprint: true
             }
         }
+        stage('Deploy') {
+    steps {
+        bat 'copy /Y jenkins-demo\\target\\*.jar C:\\Deployments\\jenkins-demo\\'
+    }
+}
 
         stage('JUnit Report') {
             steps {
